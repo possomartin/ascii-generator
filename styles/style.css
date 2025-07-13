@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root{
+    --color-background: #f7fef6;
+    --color-foreground: #ffffff;
+    --color-primary: #46df37;
+    --color-secondary: #8bedc7;
+    --color-text: #0a1f05;
+    --color-accent: #61e6e0;
+
+    --font-cinzel: "Cinzel", serif;
+    --font-cormorant: "Cormorant Garamond", serif;
+}
+
+body
+{
+    margin: 0;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    
+    font-size: 1.2rem;
+    font-style: normal;
+    font-family: var(--font-cinzel);
+}
+
+/* File Input Buttons */
+
+input[type="file"] {
+    font-family: inherit;
+
+    padding: 40px 20px;
+    border-radius: 8px;
+
+    box-shadow: 3px 2px 6px grey;
+    background-color: var(--color-foreground);
+}
+
+input[type="file"]::file-selector-button
+{
+    cursor: pointer;
+    padding: 5px 10px;
+
+    border: none;
+    box-shadow: 2px 1px 5px var(--color-text);
+
+    transition: all ease-in 2s;
+    background-color: var(--color-accent);
+
+    margin-right: 10px;
+    border-radius: 8px;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--font-cormorant);    
+}
+
+input[type="file"]::file-selector-button:hover
+{
+    transform: scale(0.98);
+    box-shadow: inset -3px 2px 6px var(--color-text);
+}
+
+/* Buttons */
+
+.btn
+{
+    cursor: pointer;
+
+    border: none;
+    box-shadow: 2px 1px 5px var(--color-text);
+    
+
+    padding: 5px 10px;
+    border-radius: 8px;
+
+
+    transition: all ease-in 0.5s;
+    background-color: var(--color-secondary);
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--font-cormorant);    
+
+}
+
+.btn:nth-child(1):hover
+{
+    background-color: var(--color-primary);
+}
+
+.btn:nth-child(2):hover
+{
+    background-color: var(--color-accent);
+    
+}
+
+.btn:hover
+{
+    transform: scale(0.98);
+    box-shadow: inset -3px 2px 6px var(--color-text);
+}
+
+.header-container
+{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    padding: 20px 40px;
+
+    border: 1px solid red;
+}
