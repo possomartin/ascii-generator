@@ -1,7 +1,12 @@
+import { getContext } from "./src/utils/utils";
 /* Variable Declarations */
 const fileInput = document.getElementById('imageUpload');
-const canvas = document.getElementById('transformer');
-const ctx = canvas.getContext('2d');
+const transformerCanvas = document.getElementById('transformer');
+const resultCanvas = document.getElementById('result');
+
+const transformerCTX = getContext(transformerCanvas);
+const resultCTX = getContext(resultCanvas);
+
 
 const files = [];
 var index = 0;
@@ -48,7 +53,8 @@ const pasteImage = async () => {
             img.addEventListener('load', () => {
                 canvas.width = img.width;
                 canvas.height = img.height;
-                ctx.drawImage(img, 0, 0);
+                transformerCTX.drawImage(img, 0, 0);
+                resultCTX.drawImage(img, 0, 0);
             });
 
             img.src = imageSrc;

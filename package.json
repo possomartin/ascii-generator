@@ -1,0 +1,39 @@
+{
+  "name": "ascii-generator",
+  "version": "1.0.0",
+  "description": "ASCII CONVERTER APP",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsx --env-file=.env src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/possomartin/ascii-generator.git"
+  },
+  "keywords": [
+    "png",
+    "js",
+    "ts"
+  ],
+  "author": "Martin Posso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/possomartin/ascii-generator/issues"
+  },
+  "homepage": "https://github.com/possomartin/ascii-generator#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.6",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.2.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
