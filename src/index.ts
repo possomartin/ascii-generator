@@ -1,9 +1,17 @@
 import express from "express";
-import indexRouter from "./routes/indexRouter.js";
 import bodyParser from "body-parser";
+import { __dirname, page } from './utils/utils.js';
+import indexRouter from "./routes/indexRouter.js";
+
 
 const app = express();
 const port = process.env.PORT;
+
+app.use(express.static(__dirname));
+
+app.get('/' , (req, res) => {
+    res.sendFile(page);
+})
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
